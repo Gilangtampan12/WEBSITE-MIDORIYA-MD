@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: url('foto/Midoriya.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.background-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.85);
+  z-index: -1;
+}
+
+.header {
+  padding: 20px;
+  background: rgba(25, 25, 25, 0.9);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.search-box {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: none;
+  background-color: #1f1f1f;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-box:focus {
+  outline: none;
+  box-shadow: 0 0 10px #00ffc3;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.creator {
+  color: #00e0ff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.creator:hover {
+  text-decoration: underline;
+}
+
+.version {
+  opacity: 0.7;
+  font-style: italic;
+}
+
+.container {
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  color: #00ffc3;
+  text-shadow: 2px 2px 8px rgba(0, 255, 195, 0.3);
+  margin-bottom: 30px;
+}
+
+.card {
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 0 25px rgba(0, 255, 195, 0.1);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 195, 0.25);
+}
+
+.card h2 {
+  font-size: 24px;
+  color: #00ccff;
+  margin-bottom: 12px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 30px;
+  color: #dddddd;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.action {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.image {
+  width: 130px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.image:hover {
+  transform: scale(1.05);
+}
+
+.btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(to right, #00ffc3, #00bfff);
+  color: #000;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 195, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(to right, #00bfff, #00ffc3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 195, 0.5);
+}
+
+@media (max-width: 600px) {
+  .search-box {
+    width: 100%;
+  }
+  
+  .title {
+    font-size: 28px;
+  }
+  
+  .card {
+    padding: 20px;
+  }
+  
+  .card h2 {
+    font-size: 20px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 15px;
+  }
+  
+  .image {
+    width: 110px;
+  }
+}
